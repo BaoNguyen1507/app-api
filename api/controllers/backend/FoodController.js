@@ -43,6 +43,7 @@ module.exports = {
     sails.log.info("================================ FoodController.get => START ================================");
     // GET ALL PARAMS
     const params = req.allParams();
+    sails.log(params);
     // CHECK ID PARAM
     if (!params.id) {
       return res.badRequest(FoodError.ERR_ID_REQUIRED);
